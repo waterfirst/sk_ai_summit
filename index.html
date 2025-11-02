@@ -13,7 +13,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1100px; /* 테이블 포함을 위해 너비 확장 */
             margin: 20px auto;
             background-color: #161b22;
             padding: 30px;
@@ -89,6 +89,17 @@
             color: #cccccc;
             margin-top: 20px;
         }
+        .recommend-table th {
+            background-color: #2a2f37;
+            color: #00ffc8;
+        }
+        .recommend-table td {
+            font-size: 0.95em;
+        }
+        .reason {
+            color: #b1b6bb;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -105,123 +116,88 @@
         </p>
     </div>
     
-    <h2>🗓️ Day 1 (11/3) 주요 동선 및 시간표</h2>
+    <h2>🗓️ Day 1 (11/3) 디스플레이 연구원 추천 일정</h2>
 
     <p class="track-info"><strong>일시:</strong> 2025. 11. 3 (월) | <strong>장소:</strong> 서울 COEX</p>
-    <p class="track-info">※ 모든 세션은 선착순으로 입장이 가능합니다. 특히 KEYNOTE는 일찍 도착하시는 것을 추천합니다.</p>
+    <p class="track-info">※ <span class="highlight">제조업 AI/데이터 분석</span>에 초점을 맞춘 추천 동선입니다. 트랙룸(201, 203, 205) 간의 이동이 필요합니다.</p>
 
-    <table>
+    <table class="recommend-table">
         <thead>
             <tr>
                 <th>시간</th>
-                <th>세션 구분</th>
-                <th>세션 제목 / 주요 연사</th>
-                <th>비고 (장소/특이사항)</th>
+                <th>강의장 위치</th>
+                <th>세션 내용 (트랙)</th>
+                <th>동선</th>
+                <th>추천 이유 (R&D/제조)</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>09:30</td>
-                <td><strong>입장 시작</strong></td>
+                <td>Keynote 홀</td>
                 <td>등록 및 입장</td>
-                <td>세션 시작 5분 전까지 입장 요망</td>
+                <td>입장 및 Keynote 홀 착석</td>
+                <td class="reason">세션 시작 전 미리 입장하여 좋은 자리 확보</td>
             </tr>
             <tr class="keynote">
-                <td>10:00 - 10:45</td>
-                <td>Keynote</td>
-                <td><strong>AI Now & Next : 미래 AI Infra와 AI Use case</strong><br>
-                    (최태원 SK 회장, Sam Altman/Andy Jassy 영상 연사)</td>
-                <td>오전 메인 이벤트</td>
-            </tr>
-            <tr class="keynote">
-                <td>10:45 - 11:00</td>
-                <td>Keynote I</td>
-                <td>AI 혁신의 중심, SKT AI Infra의 Now & Next (정재헌 SKT CEO)</td>
-                <td></td>
-            </tr>
-            <tr class="keynote">
-                <td>11:00 - 11:15</td>
-                <td>Keynote II</td>
-                <td>AI 시대, SK하이닉스가 그리는 새로운 비전과 기술 (곽노정 SK하이닉스 CEO)</td>
-                <td></td>
+                <td>10:00 - 11:15</td>
+                <td>Keynote 홀</td>
+                <td>**Keynote (SK/OpenAI/Amazon)**</td>
+                <td>(동일 장소 유지)</td>
+                <td class="reason">**[필수]** 글로벌 AI 기술 및 산업의 거시적 방향성 파악 (R&D 전략 정립)</td>
             </tr>
             <tr>
                 <td>11:15 - 13:00</td>
-                <td>휴식</td>
+                <td>자유</td>
                 <td>점심 / 휴식 시간</td>
-                <td></td>
+                <td>식사 후 Keynote 홀 근처 이동</td>
+                <td class="reason">오후 일정 전 휴식 및 네트워킹</td>
             </tr>
             <tr>
                 <td>13:00 - 14:00</td>
-                <td>New Chip Solution</td>
-                <td><strong>메모리 중심 컴퓨팅의 실제와 미래</strong><br>(David A. Patterson (Google, UC Berkeley) 외 3인 패널)</td>
-                <td>오후 첫 메인 세션</td>
+                <td>Keynote 홀</td>
+                <td>**메모리 중심 컴퓨팅의 실제와 미래** (New Chip Solution)</td>
+                <td>(동일 장소 유지)</td>
+                <td class="reason">**[하드웨어]** 데이터 분석 환경에 필수적인 차세대 컴퓨팅 아키텍처 이해</td>
             </tr>
             <tr>
-                <td>14:00 - 16:00</td>
-                <td><strong>오후 트랙 선택 (집중 세션)</strong></td>
-                <td>
-                    <span class="highlight">**[A] AI System & Infra (집중)**</span><br>
-                    (14:00) 차세대 반도체 (Tim Costa, NVIDIA) 외
-                </td>
-                <td>
-                    **[A] 혹은 B/C/D 트랙 중 하나를 선택해야 함**
-                </td>
-            </tr>
-            <tr>
-                <td>16:00 - 17:00</td>
-                <td>Agentic AI</td>
-                <td><strong>Agentic AI, 가능성에서 현실로</strong><br>(정신아 kakao 대표 주제발표 및 패널토의)</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>17:00 - 18:00</td>
-                <td>Sovereign AI</td>
-                <td><strong>소버린 AI, 국가경쟁력의 새로운 기반</strong><br>(윤성로 서울대 교수 주제발표 및 패널토의)</td>
-                <td>Day 1 최종 메인 세션</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <hr>
-
-    <h2>💡 13:30 이후 동시 진행 트랙 세션 (선택 가이드)</h2>
-    <p class="track-info">13:30부터는 4개의 트랙 세션이 동시에 진행됩니다. 관심 있는 분야의 **트랙(룸)**을 선택하여 이동하는 것이 효율적입니다.</p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>시간</th>
-                <th>AI Infra (201)</th>
-                <th>AI Model (202)</th>
-                <th>AIX (203)</th>
-                <th>Special Session (205)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>13:30 - 13:55</td>
-                <td>AI-BaaS 환경 구축을 위한 효율적 관리 방안</td>
-                <td>초거대 LLM with Reasoning</td>
-                <td>AI/ML 기반 실시간 트래픽 예측 및 제어</td>
-                <td>AI 에이전트 시대의 지능정보처리 전략</td>
-            </tr>
-            <tr>
-                <td>14:05 - 14:30</td>
-                <td>GPU 기반 스토리지 아키텍처</td>
-                <td>초거대 AI 성능 극대화를 위한</td>
-                <td>AI for Industrial AI Transformation</td>
-                <td>미래를 연결하고, 다음 스텝을 준비하는 전략</td>
+                <td>14:00 - 14:30</td>
+                <td>트랙 203 (AIX)</td>
+                <td>**AI for Industrial AI Transformation** (AIX)</td>
+                <td>Keynote 홀 → **트랙 203 이동**</td>
+                <td class="reason">**[제조업 핵심]** 디스플레이 제조 공정/라인에 AI를 적용한 구체적인 전환 사례 학습</td>
             </tr>
             <tr>
                 <td>14:40 - 15:05</td>
-                <td>AI 인프라, 효율성 넘어 신뢰로</td>
-                <td>초거대 LLM 서비스의 메모리 관리 및 최적화</td>
-                <td>안전하고 신뢰할 수 있는 LLM 기반 서비스 환경 설계</td>
-                <td>스페셜 세션</td>
+                <td>트랙 203 (AIX)</td>
+                <td>안전하고 신뢰할 수 있는 LLM 기반 서비스 환경 설계 (AIX)</td>
+                <td>(동일 장소 유지)</td>
+                <td class="reason">LLM을 활용한 **R&D 문서 분석 및 보고서 자동화** 등 생산성 향상 방안 모색</td>
+            </tr>
+            <tr>
+                <td>15:15 - 15:40</td>
+                <td>트랙 205 (Special)</td>
+                <td>**AI 데이터 전략** (Special Session)</td>
+                <td>트랙 203 → **트랙 205 이동**</td>
+                <td class="reason">**[데이터 분석]** 대규모 R&D 데이터의 수집, 정제, 활용 전략을 통해 분석 역량 강화</td>
+            </tr>
+            <tr>
+                <td>16:00 - 17:00</td>
+                <td>Keynote 홀</td>
+                <td>**Agentic AI** (메인 세션)</td>
+                <td>트랙 205 → **Keynote 홀 이동**</td>
+                <td class="reason">AI 에이전트 기반의 **R&D 테스트 및 분석 자동화** 잠재력 파악</td>
+            </tr>
+            <tr>
+                <td>17:00 - 18:00</td>
+                <td>Keynote 홀</td>
+                <td>**Sovereign AI** (메인 세션)</td>
+                <td>(동일 장소 유지)</td>
+                <td class="reason">국가 및 산업 차원의 AI 인프라 전략 이해 (거시적 시야 확보)</td>
             </tr>
         </tbody>
     </table>
+
 </div>
 
 </body>
